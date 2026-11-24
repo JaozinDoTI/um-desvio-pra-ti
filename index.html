@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3eddf">
+  <meta name="description" content="Pai, fiz uma coisinha pra ti. Vem por aqui.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Um desvio pra ti">
+  <meta property="og:description" content="Pai, fiz uma coisinha pra ti. Vem por aqui.">
+  <meta property="og:url" content="https://jaozindoti.github.io/um-desvio-pra-ti/">
+  <meta property="og:image" content="https://jaozindoti.github.io/um-desvio-pra-ti/assets/capa.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Capa de Um desvio pra ti, com uma estrada desenhada sobre um mapa verde.">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Um desvio pra ti</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./estilo.css">
+  <script src="./estrada.js" defer></script>
+</head>
+<body>
+  <header class="cabecalho moldura">
+    <div class="marca">
+      <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+        <rect width="32" height="32" rx="2" fill="currentColor"/>
+        <path d="M8 25c0-7 15-4 15-10 0-4-11 0-11-5 0-2 4-3 9-3" fill="none" stroke="#f3eddf" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="22" cy="7" r="2" fill="#ef9678"/>
+      </svg>
+      <span>De filho pra pai</span>
+    </div>
+    <span class="carimbo">De longe, com carinho</span>
+  </header>
+
+  <main class="moldura">
+    <div class="viagem" id="partida">
+      <div class="historia">
+        <div class="cenas">
+          <article class="cena" data-cena="0">
+            <p class="sobrelinha"><span></span> Ponto de partida</p>
+            <h1 tabindex="-1">Um desvio <em>pra ti.</em></h1>
+            <p class="recado">Pai, fiz uma coisinha pra ti.<br>É só seguir a estrada.</p>
+          </article>
+          <article class="cena" data-cena="1">
+            <p class="sobrelinha"><span></span> Primeira curva</p>
+            <h2 tabindex="-1">Quase mandei <em>um áudio.</em></h2>
+            <p class="recado">Mas aí pensei: já que eu passo o dia fazendo coisa no computador, hoje dava pra fazer uma pra ti.</p>
+          </article>
+          <article class="cena" data-cena="2">
+            <p class="sobrelinha"><span></span> Segunda curva</p>
+            <h2 tabindex="-1">Antes de <em>chegar.</em></h2>
+            <p class="recado">Como a gente mora longe, hoje o abraço vai ter que ir por aqui. Tô com saudade, pai.</p>
+          </article>
+        </div>
+        <div class="acoes">
+          <a class="botao" id="atalho" href="#mirante">Ir ao mirante</a>
+          <button class="botao" id="avancar" type="button" hidden>Pegar a estrada</button>
+          <button class="voltar" id="voltar" type="button" aria-label="Voltar uma parada" hidden>Voltar</button>
+        </div>
+      </div>
+
+      <div class="mapa" aria-hidden="true">
+        <div class="mapa-legenda"><span></span> Estrada do mirante</div>
+        <div class="rosa">
+          <span>N</span>
+          <svg viewBox="0 0 32 32" width="30" height="30">
+            <path d="M16 3 19 13 29 16 19 19 16 29 13 19 3 16 13 13Z" fill="none" stroke="currentColor"/>
+            <path d="M16 3 19 13 16 16 13 13Z" fill="currentColor"/>
+            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="terreno" id="terreno">
+          <svg class="tracado" id="tracado" viewBox="0 0 680 560">
+            <defs>
+              <path id="trecho-1" d="M135 460 C188 474 229 451 227 417 S156 381 163 344 C169 309 241 296 306 334"/>
+              <path id="trecho-2" d="M306 334 C373 375 500 426 535 365 C569 306 462 273 408 287 S324 281 333 242 C342 201 433 190 481 216"/>
+              <path id="trecho-3" d="M481 216 C527 241 576 212 544 177 C514 144 428 152 392 135 C365 123 366 92 402 91"/>
+            </defs>
+            <g class="estrada-sombra" fill="none">
+              <use href="#trecho-1"/><use href="#trecho-2"/><use href="#trecho-3"/>
+            </g>
+            <g class="estrada-base" fill="none">
+              <use href="#trecho-1"/><use href="#trecho-2"/><use href="#trecho-3"/>
+            </g>
+            <g class="estrada-feita" fill="none">
+              <use href="#trecho-1"/><use href="#trecho-2"/><use href="#trecho-3"/>
+            </g>
+            <g class="pontos">
+              <circle cx="135" cy="460" r="5"/><circle cx="306" cy="334" r="5"/>
+              <circle cx="481" cy="216" r="5"/><circle cx="402" cy="91" r="7"/>
+              <path d="M402 89V68l16 4-16 5" class="bandeira"/>
+            </g>
+            <g class="nomes-mapa">
+              <text x="53" y="434">PARTIDA</text>
+              <text x="254" y="375">1ª CURVA</text>
+              <text x="469" y="189">2ª CURVA</text>
+              <text x="427" y="97" class="destino">MIRANTE</text>
+            </g>
+          </svg>
+          <div class="marcador" id="marcador" hidden><span></span></div>
+        </div>
+        <div class="mapa-rodape">
+          <span id="dica-mapa" hidden>Arraste o ponto pra dirigir.</span>
+        </div>
+      </div>
+
+      <div class="andamento" id="andamento" hidden>
+        <div class="andamento-tracos" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <span id="estado" role="status">Partida · 1 de 4</span>
+      </div>
+    </div>
+
+    <section class="mirante" id="mirante" aria-labelledby="titulo-mirante">
+      <div class="cartao">
+        <div class="cartao-texto">
+          <p class="sobrelinha"><span></span> Chegamos</p>
+          <h2 id="titulo-mirante" tabindex="-1">Feliz aniversário, <em>pai!</em></h2>
+          <p>Obrigado por tudo, pai. Que esse ano te traga saúde, uns bons dias de descanso e bastante motivo pra rir.</p>
+          <p>Te amo. Na próxima vez que a gente se vir, tem abraço de verdade.</p>
+          <p class="assinatura">Do teu filho.</p>
+        </div>
+        <figure class="fotografia">
+          <img src="./assets/serra.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Uma estrada cheia de curvas entre montanhas cobertas de mata.">
+          <figcaption>Um desvio que valeu a pena.</figcaption>
+        </figure>
+      </div>
+      <div class="fim">
+        <button type="button" class="voltar" id="recomecar" hidden>Fazer o caminho de novo</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
