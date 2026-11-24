@@ -11,7 +11,7 @@
   const mirante = document.querySelector('#mirante');
   const tituloMirante = document.querySelector('#titulo-mirante');
   const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const rotulos = ['Partida', 'Primeira curva', 'Segunda curva', 'Mirante'];
+  const rotulos = ['Itá', 'Primeira curva', 'Segunda curva', 'Floripa'];
   const proximasAcoes = ['Pegar a estrada', 'Seguir viagem', 'Chegar ao mirante', 'Ler o recado'];
 
   const trechos = [...document.querySelectorAll('.estrada-feita use')].map((linha) => {

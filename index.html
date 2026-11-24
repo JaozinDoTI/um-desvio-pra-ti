@@ -10,10 +10,10 @@
   <meta property="og:title" content="Um desvio pra ti">
   <meta property="og:description" content="Pai, fiz uma coisinha pra ti. Vem por aqui.">
   <meta property="og:url" content="https://jaozindoti.github.io/um-desvio-pra-ti/">
-  <meta property="og:image" content="https://jaozindoti.github.io/um-desvio-pra-ti/assets/capa.jpg">
+  <meta property="og:image" content="https://jaozindoti.github.io/um-desvio-pra-ti/assets/capa.jpg?v=ita-floripa">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Capa de Um desvio pra ti, com uma estrada desenhada sobre um mapa verde.">
+  <meta property="og:image:alt" content="Capa de Um desvio pra ti, com uma estrada de Itá a Floripa desenhada no mapa de Santa Catarina.">
   <meta name="twitter:card" content="summary_large_image">
   <title>Um desvio pra ti</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
@@ -30,7 +30,7 @@
       </svg>
       <span>De filho pra pai</span>
     </div>
-    <span class="carimbo">De longe, com carinho</span>
+    <span class="carimbo">De Itá a Floripa</span>
   </header>
 
   <main class="moldura">
@@ -50,7 +50,7 @@
           <article class="cena" data-cena="2">
             <p class="sobrelinha"><span></span> Segunda curva</p>
             <h2 tabindex="-1">Antes de <em>chegar.</em></h2>
-            <p class="recado">Como a gente mora longe, hoje o abraço vai ter que ir por aqui. Tô com saudade, pai.</p>
+            <p class="recado">Tu aí em Itá, eu aqui em Floripa. Hoje o abraço vai ter que ir por aqui. Tô com saudade, pai.</p>
           </article>
         </div>
         <div class="acoes">
@@ -61,7 +61,7 @@
       </div>
 
       <div class="mapa" aria-hidden="true">
-        <div class="mapa-legenda"><span></span> Estrada do mirante</div>
+        <div class="mapa-legenda"><span></span> Trajeto ilustrado</div>
         <div class="rosa">
           <span>N</span>
           <svg viewBox="0 0 32 32" width="30" height="30">
@@ -73,9 +73,9 @@
         <div class="terreno" id="terreno">
           <svg class="tracado" id="tracado" viewBox="0 0 680 560">
             <defs>
-              <path id="trecho-1" d="M135 460 C188 474 229 451 227 417 S156 381 163 344 C169 309 241 296 306 334"/>
-              <path id="trecho-2" d="M306 334 C373 375 500 426 535 365 C569 306 462 273 408 287 S324 281 333 242 C342 201 433 190 481 216"/>
-              <path id="trecho-3" d="M481 216 C527 241 576 212 544 177 C514 144 428 152 392 135 C365 123 366 92 402 91"/>
+              <path id="trecho-1" d="M213 236 C233 229 229 191 257 184 C284 177 268 236 297 239 C316 241 324 218 337 219"/>
+              <path id="trecho-2" d="M337 219 C363 220 354 174 394 165 C432 155 434 191 408 214 C379 238 380 279 411 285 C444 292 443 242 468 246"/>
+              <path id="trecho-3" d="M468 246 C492 250 501 297 528 310 C554 322 572 297 560 274 C550 257 541 236 561 228 C584 218 588 260 604 272"/>
             </defs>
             <g class="estrada-sombra" fill="none">
               <use href="#trecho-1"/><use href="#trecho-2"/><use href="#trecho-3"/>
@@ -87,15 +87,16 @@
               <use href="#trecho-1"/><use href="#trecho-2"/><use href="#trecho-3"/>
             </g>
             <g class="pontos">
-              <circle cx="135" cy="460" r="5"/><circle cx="306" cy="334" r="5"/>
-              <circle cx="481" cy="216" r="5"/><circle cx="402" cy="91" r="7"/>
-              <path d="M402 89V68l16 4-16 5" class="bandeira"/>
+              <circle cx="213" cy="236" r="6"/><circle cx="337" cy="219" r="5"/>
+              <circle cx="468" cy="246" r="5"/><circle cx="604" cy="272" r="7"/>
+              <path d="M604 270v-22l16 4-16 5" class="bandeira"/>
             </g>
             <g class="nomes-mapa">
-              <text x="53" y="434">PARTIDA</text>
-              <text x="254" y="375">1ª CURVA</text>
-              <text x="469" y="189">2ª CURVA</text>
-              <text x="427" y="97" class="destino">MIRANTE</text>
+              <text x="186" y="274" text-anchor="end" class="cidade">ITÁ</text>
+              <text x="328" y="277" text-anchor="middle">1ª CURVA</text>
+              <text x="477" y="215" text-anchor="middle">2ª CURVA</text>
+              <text x="630" y="355" text-anchor="end" class="cidade destino">FLORIPA</text>
+              <text x="353" y="410" text-anchor="middle" class="estado-mapa">SANTA CATARINA</text>
             </g>
           </svg>
           <div class="marcador" id="marcador" hidden><span></span></div>
@@ -107,22 +108,22 @@
 
       <div class="andamento" id="andamento" hidden>
         <div class="andamento-tracos" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <span id="estado" role="status">Partida · 1 de 4</span>
+        <span id="estado" role="status">Itá · 1 de 4</span>
       </div>
     </div>
 
     <section class="mirante" id="mirante" aria-labelledby="titulo-mirante">
       <div class="cartao">
         <div class="cartao-texto">
-          <p class="sobrelinha"><span></span> Chegamos</p>
+          <p class="sobrelinha"><span></span> Chegamos a Floripa</p>
           <h2 id="titulo-mirante" tabindex="-1">Feliz aniversário, <em>pai!</em></h2>
           <p>Obrigado por tudo, pai. Que esse ano te traga saúde, uns bons dias de descanso e bastante motivo pra rir.</p>
           <p>Te amo. Na próxima vez que a gente se vir, tem abraço de verdade.</p>
           <p class="assinatura">Do teu filho.</p>
         </div>
         <figure class="fotografia">
-          <img src="./assets/serra.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Uma estrada cheia de curvas entre montanhas cobertas de mata.">
-          <figcaption>Um desvio que valeu a pena.</figcaption>
+          <img src="./assets/familia.jpg" width="816" height="612" loading="lazy" decoding="async" alt="Meu pai no meio, eu à esquerda e minha mãe à direita, com a estrada de serra ao fundo.">
+          <figcaption>Nós três, entre uma curva e outra.</figcaption>
         </figure>
       </div>
       <div class="fim">

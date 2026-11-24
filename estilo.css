@@ -108,7 +108,8 @@ h1 em, h2 em { display: block; padding-bottom: .11em; color: var(--ferrugem); fo
   isolation: isolate;
   position: relative;
   aspect-ratio: 680 / 560;
-  background: #20352c url('./assets/relevo.svg') center / 100% 100% no-repeat;
+  background: url('./assets/santa-catarina.svg') center / 100% 100% no-repeat,
+    #20352c url('./assets/relevo.svg') center / 100% 100% no-repeat;
   border: 1px solid #25382e;
   color: #f3e9cb;
   box-shadow: 0 11px 24px #38301919;
@@ -127,7 +128,9 @@ h1 em, h2 em { display: block; padding-bottom: .11em; color: var(--ferrugem); fo
 .pontos { fill: #22372d; stroke: #e6d8aa; stroke-width: 2; }
 .bandeira { fill: var(--coral); stroke: var(--coral); stroke-linejoin: round; }
 .nomes-mapa { font: 700 14px var(--mono); fill: #f3e9cb; letter-spacing: 1.2px; paint-order: stroke; stroke: #24382d; stroke-width: 4; stroke-linejoin: round; }
+.nomes-mapa .cidade { font-size: 24px; letter-spacing: 2px; }
 .nomes-mapa .destino { fill: var(--coral); }
+.nomes-mapa .estado-mapa { fill: #d8d4a9; opacity: .86; letter-spacing: 3px; }
 
 .marcador { position: absolute; z-index: 1; width: 48px; height: 48px; transform: translate(-50%, -50%); display: grid; place-items: center; touch-action: none; cursor: grab; }
 .marcador:active { cursor: grabbing; }
@@ -200,6 +203,7 @@ h1 em, h2 em { display: block; padding-bottom: .11em; color: var(--ferrugem); fo
   .rosa svg { width: 22px; height: 22px; }
   .mapa-rodape { inset: auto 15px 15px; font-size: .75rem; letter-spacing: .015em; }
   .nomes-mapa { font-size: 19px; }
+  .nomes-mapa .cidade { font-size: 29px; letter-spacing: 1.3px; }
   .andamento { padding-top: 12px; font-size: .72rem; }
   .andamento-tracos i { width: 14px; }
   .mirante { scroll-margin-top: 13px; padding-top: 14px; }
